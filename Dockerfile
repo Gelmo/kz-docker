@@ -70,7 +70,7 @@ RUN touch INSTALLING.LOCK \
  && rm -f INSTALLING.LOCK
 RUN wget https://kzmaps.tangoworldwide.net/mapcycles/gokz.txt \
  && mv /home/linuxgsm/linuxgsm/gokz.txt /home/linuxgsm/linuxgsm/serverfiles/csgo/mapcycle.txt
-RUN wget https://kzmaps.tangoworldwide.net/bsps/kz_coronado_fix.bsp
+RUN wget https://kzmaps.tangoworldwide.net/bsps/kz_coronado_fix.bsp \
  && mv /home/linuxgsm/linuxgsm/kz_coronado_fix.bsp /home/linuxgsm/linuxgsm/serverfiles/csgo/maps/
 
 CMD ["bash"]
