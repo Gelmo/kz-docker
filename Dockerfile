@@ -62,12 +62,8 @@ RUN cd /home/linuxgsm/linuxgsm/serverfiles/csgo/addons/sourcemod/gamedata/ \
 RUN cd /home/linuxgsm/linuxgsm/serverfiles/csgo/addons/sourcemod/extensions/ \
  && chmod 700 ./*.so \
  && chmod 700 ./*.autoload
-
-RUN touch INSTALLING.LOCK \
- && ./linuxgsm.sh $LGSM_GAMESERVERNAME \
- && mv $LGSM_GAMESERVERNAME lgsm-gameserver \
- && ./lgsm-gameserver auto-install \
- && rm -f INSTALLING.LOCK
+RUN ./linuxgsm.sh csgoserver \
+ && mv csgoserver lgsm-gameserver
 RUN wget https://kzmaps.tangoworldwide.net/mapcycles/gokz.txt \
  && mv /home/linuxgsm/linuxgsm/gokz.txt /home/linuxgsm/linuxgsm/serverfiles/csgo/mapcycle.txt
 RUN wget https://kzmaps.tangoworldwide.net/bsps/kz_coronado_fix.bsp \
