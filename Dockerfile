@@ -54,8 +54,6 @@ RUN mkdir /home/linuxgsm/linuxgsm/log/ \
 
 RUN ./linuxgsm.sh csgoserver \
  && mv csgoserver lgsm-gameserver
-RUN wget https://kzmaps.tangoworldwide.net/bsps/kz_coronado_fix.bsp \
- && mv /home/linuxgsm/linuxgsm/kz_coronado_fix.bsp /home/linuxgsm/linuxgsm/serverfiles/csgo/maps/
 
 ADD --chown=linuxgsm:linuxgsm gokz.sh /home/linuxgsm/linuxgsm/
 ADD --chown=linuxgsm:linuxgsm kzt.sh /home/linuxgsm/linuxgsm/

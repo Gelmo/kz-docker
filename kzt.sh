@@ -12,7 +12,12 @@ cd \
  && wget https://kzmaps.tangoworldwide.net/mapcycles/kztimer.txt \
  && mv /home/linuxgsm/linuxgsm/kztimer.txt /home/linuxgsm/linuxgsm/serverfiles/csgo/mapcycle.txt
 
+cd ~/linuxgsm/
+
 ./lgsm-gameserver auto-install
+
+wget https://kzmaps.tangoworldwide.net/bsps/kz_coronado_fix.bsp \
+ && mv /home/linuxgsm/linuxgsm/kz_coronado_fix.bsp /home/linuxgsm/linuxgsm/serverfiles/csgo/maps/
 
 echo "metamod" | ./lgsm-gameserver mi
 sleep 5s
