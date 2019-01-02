@@ -68,5 +68,7 @@ RUN wget https://kzmaps.tangoworldwide.net/mapcycles/gokz.txt \
  && mv /home/linuxgsm/linuxgsm/gokz.txt /home/linuxgsm/linuxgsm/serverfiles/csgo/mapcycle.txt
 RUN wget https://kzmaps.tangoworldwide.net/bsps/kz_coronado_fix.bsp \
  && mv /home/linuxgsm/linuxgsm/kz_coronado_fix.bsp /home/linuxgsm/linuxgsm/serverfiles/csgo/maps/
+ADD --chown=linuxgsm:linuxgsm run.sh /home/linuxgsm/linuxgsm/
+RUN chmod +x /home/linuxgsm/linuxgsm/run.sh
 
 CMD ["bash"]
