@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd ~/linuxgsm/
+
+./lgsm-gameserver auto-install
+
 cd \
  && mkdir downloads \
  && cd downloads/ \
@@ -57,7 +61,7 @@ cd \
 
 cd ~/linuxgsm/
 
-./lgsm-gameserver auto-install
+mv databases.cfg /home/linuxgsm/linuxgsm/serverfiles/csgo/addons/sourcemod/configs/
 
 wget https://kzmaps.tangoworldwide.net/bsps/kz_coronado_fix.bsp \
  && mv /home/linuxgsm/linuxgsm/kz_coronado_fix.bsp /home/linuxgsm/linuxgsm/serverfiles/csgo/maps/
