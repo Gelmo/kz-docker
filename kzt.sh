@@ -18,15 +18,23 @@ cd \
 
 cd ~/linuxgsm/
 
-mv databases.cfg /home/linuxgsm/linuxgsm/serverfiles/csgo/addons/sourcemod/configs/
-
-wget https://kzmaps.tangoworldwide.net/bsps/kz_coronado_fix.bsp \
- && mv /home/linuxgsm/linuxgsm/kz_coronado_fix.bsp /home/linuxgsm/linuxgsm/serverfiles/csgo/maps/
-
 echo "metamod" | ./lgsm-gameserver mi
 sleep 5s
 
 echo "sourcemod" | ./lgsm-gameserver mi
 sleep 5s
 
-./lgsm-gameserver start
+mv -f databases.cfg /home/linuxgsm/linuxgsm/serverfiles/csgo/addons/sourcemod/configs/
+
+wget https://kzmaps.tangoworldwide.net/bsps/kz_coronado_fix.bsp \
+ && mv /home/linuxgsm/linuxgsm/kz_coronado_fix.bsp /home/linuxgsm/linuxgsm/serverfiles/csgo/maps/
+
+echo "Do you want to start the server or edit configs?"
+echo "[1] Start the server"
+echo "[2] Do not start the server"
+select yn in "1" "2"; do
+    case $yn in
+        1 ) ./lgsm-gameserver start; break;;
+        2 ) break;;
+    esac
+done
