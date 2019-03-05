@@ -25,6 +25,8 @@ RUN cd \
  && rm -rf Global* \
  && rsync -Pva /home/linuxgsm/downloads/ /home/linuxgsm/linuxgsm/serverfiles/csgo/maps/ \
  && rm -rf ~/downloads/* \
+ && cat /home/linuxgsm/linuxgsm/exception.add >> /home/linuxgsm/linuxgsm/serverfiles/csgo/addons/sourcemod/configs/kztimer/exception_list.txt \
+ && dos2unix /home/linuxgsm/linuxgsm/serverfiles/csgo/addons/sourcemod/configs/kztimer/exception_list.txt \
  && cd ~/linuxgsm/
 
 CMD ["bash"]
